@@ -1,0 +1,100 @@
+<!-- ?xml version="1.0" encoding="utf-8"? -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context="com.example.for_samsung_school.MainActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:gravity="center"
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="141dp"
+        android:layout_weight="1"
+        android:text="Spotify"
+        android:textColor="#CDCDCD"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="142dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="25dp"
+        android:layout_weight="1"
+        android:text="Сейчас играет:"
+        android:textColor="#646464"
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
+
+    <ImageView
+        android:id="@+id/song"
+        android:layout_width="wrap_content"
+        android:layout_height="328dp"
+        android:layout_marginTop="50dp"
+        android:layout_weight="1"
+        tools:srcCompat="@drawable/nirvana" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="368dp"
+        android:layout_marginTop="50dp"
+        android:layout_weight="2"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/nirvana"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:text="NIRVANA"
+                android:textSize="12sp"
+                app:backgroundTint="#646464" />
+
+            <Button
+                android:id="@+id/hole"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:text="hole"
+                android:textSize="14sp"
+                app:backgroundTint="#646464" />
+
+            <Button
+                android:id="@+id/queen"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:text="Queen"
+                app:backgroundTint="#646464"
+                tools:text="Queen" />
+
+            <Button
+                android:id="@+id/acdc"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:text="AC/DC"
+                app:backgroundTint="#646464" />
+
+            <Button
+                android:id="@+id/ghost"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:text="GHOST"
+                app:backgroundTint="#646464"
+                app:iconTint="#646464" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>
