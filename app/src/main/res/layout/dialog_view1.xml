@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="16dp"
+    android:layout_width="370dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginLeft="16dp"
+    android:layout_height="350dp"
+    android:layout_gravity="center"
+    android:layout_rowWeight="0"
+    android:layout_column="0"
+    android:layout_marginEnd="30dp"
+    android:layout_marginStart="30dp"
+    android:background="@drawable/button"
+    app:cardBackgroundColor="?colorPrimary"
+    app:cardCornerRadius="30dp"
+    android:layout_columnWeight="1"
+    android:padding="10dp">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="269dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:text="Спутник летит на Марс. Избегайте комет, чтобы добраться до цели. Из-за притяжения скорость увеличивается."
+        android:textColor="@color/white"
+        android:textSize="29dp" />
+</androidx.cardview.widget.CardView>

@@ -1,100 +1,139 @@
 <!-- ?xml version="1.0" encoding="utf-8"? -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/black"
-    tools:context="com.example.for_samsung_school.MainActivity">
-
-    <TextView
-        android:id="@+id/textView2"
-        android:gravity="center"
-        android:layout_marginTop="25dp"
-        android:layout_width="match_parent"
-        android:layout_height="141dp"
-        android:layout_weight="1"
-        android:text="Spotify"
-        android:textColor="#CDCDCD"
-        android:textSize="36sp" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="142dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="25dp"
-        android:layout_weight="1"
-        android:text="Сейчас играет:"
-        android:textColor="#646464"
-        android:textSize="30sp"
-        android:textStyle="bold|italic" />
+    android:background="@drawable/kosmos"
+    tools:context="com.example.for_samsung_school.MainActivity"
+    tools:layout_editor_absoluteX="-10dp"
+    tools:layout_editor_absoluteY="150dp">
 
     <ImageView
-        android:id="@+id/song"
-        android:layout_width="wrap_content"
-        android:layout_height="328dp"
-        android:layout_marginTop="50dp"
-        android:layout_weight="1"
-        tools:srcCompat="@drawable/nirvana" />
+        android:id="@+id/kometa3"
+        android:layout_width="68dp"
+        android:layout_height="63dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.364"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.101"
+        app:srcCompat="@drawable/kometa" />
 
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="368dp"
-        android:layout_marginTop="50dp"
-        android:layout_weight="2"
-        android:fillViewport="true">
+    <ImageView
+        android:id="@+id/kometa1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:rotation="86"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.026"
+        app:srcCompat="@drawable/kometa" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/nirvana"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="5dp"
-                android:text="NIRVANA"
-                android:textSize="12sp"
-                app:backgroundTint="#646464" />
 
-            <Button
-                android:id="@+id/hole"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="5dp"
-                android:text="hole"
-                android:textSize="14sp"
-                app:backgroundTint="#646464" />
+    <Button
+        android:id="@+id/button_right"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginRight="10dp"
+        android:gravity="bottom|center"
+        android:text="→"
+        android:textColor="@color/white"
+        android:textSize="46dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.952"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.905" />
 
-            <Button
-                android:id="@+id/queen"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="5dp"
-                android:text="Queen"
-                app:backgroundTint="#646464"
-                tools:text="Queen" />
+    <Button
+        android:id="@+id/button_left"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="bottom|center"
+        android:text="←"
+        android:textColor="@color/white"
+        android:textSize="46dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.905" />
 
-            <Button
-                android:id="@+id/acdc"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="5dp"
-                android:text="AC/DC"
-                app:backgroundTint="#646464" />
+    <ImageView
+        android:id="@+id/station"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginRight="1dp"
 
-            <Button
-                android:id="@+id/ghost"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="5dp"
-                android:text="GHOST"
-                app:backgroundTint="#646464"
-                app:iconTint="#646464" />
+        android:src="@drawable/station"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.526" />
 
-        </LinearLayout>
-    </HorizontalScrollView>
-</LinearLayout>
+    <ImageView
+        android:id="@+id/info"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.977"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="@drawable/toccki" />
+
+    <ImageView
+        android:id="@+id/kometa2"
+        android:layout_width="68dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="296dp"
+        android:layout_marginLeft="296dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.101"
+        app:srcCompat="@drawable/kometa" />
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="183dp"
+        android:layout_height="78dp"
+        android:text="Timer:"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.281"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+    <TextView
+        android:id="@+id/text_home"
+        android:layout_width="385dp"
+        android:layout_height="259dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.305" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,57 +1,56 @@
 package com.example.for_samsung_school;
 
-
+import android.app.Dialog;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.util.Log;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
+    Handler mHandler = new Handler(Looper.getMainLooper());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button but_n = (Button) findViewById(R.id.nirvana);
-        Button but_h = (Button) findViewById(R.id.hole);
-        Button but_q = (Button) findViewById(R.id.queen);
-        Button but_a = (Button) findViewById(R.id.acdc);
-        Button but_g = (Button) findViewById(R.id.ghost);
-        ImageView song = (ImageView) findViewById(R.id.song);
-        song.setImageResource(R.drawable.nirvana);
+        ImageView info = (ImageView) findViewById(R.id.info);
+        Button pravo = (Button)findViewById(R.id.button_right);
+        Button levo = (Button)findViewById(R.id.button_left);
+        ImageView station = findViewById(R.id.station);
+        TextView coords = findViewById(R.id.text_home);
+        ImageView kometa1 = findViewById(R.id.kometa1);
+        TextView timer = findViewById(R.id.timer);
+        ImageView kometa2 = findViewById(R.id.kometa2);
+        ImageView kometa3 = findViewById(R.id.kometa3);
 
-        but_h.setOnClickListener(new View.OnClickListener() {
+
+        pravo.setOnClickListener(v -> {
+            station.setX((float) (station.getX() + 20));
+            //coords.setX((float) (coords.getX() + 20));
+        });
+        levo.setOnClickListener(v -> {
+            station.setX((float) (station.getX() - 20));
+            //coords.setX((float) (coords.getX() - 20));
+        });
+
+        info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                song.setImageResource(R.drawable.hole);
+                Dialog dialog = new Dialog(MainActivity.this);
+                dialog.setContentView(R.layout.dialog_view1);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(0));
+                dialog.show();
             }
-
         });
-        Log.e("hgfghfgf", "onCreate: " );
 
-        but_q.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                song.setImageResource(R.drawable.queens);
-            }
+        mHandler.post(new com.example.for_samsung_school.LoopRequestThread(coords, kometa1, kometa2, station, timer, kometa3));
 
-        });
-        but_a.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                song.setImageResource(R.drawable.acdc);
-            }
 
-        });
-        but_g.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                song.setImageResource(R.drawable.ghost);
-            }
-
-        });
     }
 }
